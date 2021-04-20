@@ -1,0 +1,16 @@
+<div>
+  <ul class="list-group">
+    <li class="list-group-item active">Todos</li>
+
+    <li *ngFor="let t of todos" class="list-group-item">
+      <div class="d-flex justify-content-between">
+        <app-todo-display [todo]="t"></app-todo-display>
+        <button class="btn btn-danger align-self-center" (click)="deleteTodo(t)" >
+          X
+        </button>
+      </div>
+    </li>
+  </ul>
+
+  
+</div>

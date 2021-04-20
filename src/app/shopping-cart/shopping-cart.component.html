@@ -1,0 +1,34 @@
+<div class="m-3">
+
+  <hr>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-8">
+        <table class="table table-striped">
+          <tr>
+            <th>Product Name</th>
+            <th>SKU </th>
+            <th>Price</th>
+            <th></th>
+          </tr>
+          <tr *ngFor="let product of products ">
+            <td>{{product.name}}</td>
+            <td>{{product.sku}}</td>
+            <td>{{product.price}}</td>
+            <td>
+              <button class="btn btn-primary" (click)="addToCart(product)" >Add</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="col-4">
+        <app-cart [items]="orderItems" (itemDeleted)="removeFromItemList($event)" ></app-cart>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>

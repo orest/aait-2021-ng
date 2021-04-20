@@ -1,0 +1,21 @@
+<div>
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Shopping Cart</h4>
+      <ul class="list-group">
+        <li class="list-group-item active">Items</li>
+        <li class="list-group-item" *ngFor="let item of items">
+          <div class="d-flex justify-content-between">
+            <span>{{item.name}}</span>
+            <span>
+              <input type="number" [(ngModel)]="item.quantity" (change)="quantityChanged(item)"
+                class="form-control form-control-sm"></span>
+            <span>= {{item.lineTotal|currency}}
+              <button class="btn btn-sm btn-danger" (click)="removeItem(item)" >X</button>
+            </span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

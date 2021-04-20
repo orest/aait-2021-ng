@@ -1,0 +1,19 @@
+<div>
+  <s *ngIf="todo.isCompleted">
+    {{todo.title}}
+  </s>
+
+  <span *ngIf="!todo.isCompleted">
+    {{todo.title}}
+  </span>
+
+  <div>
+    assignedTo: {{todo.assignedTo}}
+  </div>
+  <div> priority: {{todo.priority}}</div>
+  <div>
+    dueDate: {{todo.dueDate|date}}
+  </div>
+
+
+</div>

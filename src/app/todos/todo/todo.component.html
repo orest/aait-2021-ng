@@ -1,0 +1,25 @@
+
+<div class="form-group">
+  <textarea name="" [(ngModel)]="newTodo.title" id="" cols="30"
+   rows="5" class="form-control"></textarea>
+</div>
+
+<div class="form-group">
+  <label for="priority">Priority</label>
+  <input type="number" [(ngModel)]="newTodo.priority" name="priority" id="priority" class="form-control"  >
+</div>
+
+<div class="form-group">
+  <label for="priority">Assigned To</label>
+  <input type="text" [(ngModel)]="newTodo.assignedTo" name="assignedTo" id="assignedTo" class="form-control"  >
+</div>
+<div class="form-group">
+  <label for="priority">Due Date</label>
+  <input type="text" [(ngModel)]="newTodo.dueDate" name="dueDate" id="dueDate" class="form-control"  >
+</div>
+
+{{newTodo|json}}
+
+<button class="btn btn-success btn-block " (click)="addTodo()">
+  Add New Task
+</button>
