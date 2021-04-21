@@ -19,20 +19,20 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.refresh();
+    //this.refresh();
   }
 
-  refresh() {
-    this.todoService.getAllTodos().subscribe(data => {
-      this.todos = data;
-    });
-  }
+  // refresh() {
+  //   this.todoService.getAllTodos().subscribe(data => {
+  //     this.todos = data;
+  //   });
+  // }
 
-  addNewTodo(todo: Todo) {
-    this.todoService.addNewTodo(todo).subscribe(data => {
-      this.refresh();
-    });
-  }
+  // addNewTodo(todo: Todo) {
+  //   this.todoService.addNewTodo(todo).subscribe(data => {
+  //     this.refresh();
+  //   });
+  // }
 
   removeTodo(todo: Todo) {
     this.todos = this.todos.filter(p => {

@@ -1,12 +1,13 @@
 <div class="container mt-3">
-  <div class="row"  >
+
+  <!-- <div class="row"  >
     <div class="col-sm-8">
       <todo-list [todos]="todos" (delete)="removeTodo($event)"></todo-list>
     </div>
     <div class="col-sm-4">
       <todo (add)="addNewTodo($event)"></todo>
     </div>
-  </div>
+  </div>-->
   <!-- <div class="row">
     <div class="col-sm-12">
 
@@ -16,4 +17,25 @@
 
     </div>
   </div> -->
+  <div class="row">
+    <div class="col">
+      <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <a class="navbar-brand" href="#">AAIT NG</a>
+
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item ">
+              <a class="nav-link" routerLink="/" routerLinkActive="active" >Shopping Cart </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/todos']" routerLinkActive="active">Todos</a>
+            </li>
+
+          </ul>
+
+        </div>
+      </nav>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
 </div>
